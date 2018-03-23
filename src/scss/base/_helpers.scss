@@ -1,1 +1,24 @@
-{}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.inlineblock-fix::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.logo {
+  @include size($logo-width-default, $logo-height-default);
+  display: block;
+}
+
+.circle {
+  @include circle;
+  @include size($circle-size);
+  @include transition(0.4s);
+  @include background-image($size: cover);
+  display: block;
+}

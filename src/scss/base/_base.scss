@@ -1,1 +1,22 @@
-{}
+* {
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $font-size--text;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight--regular;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
