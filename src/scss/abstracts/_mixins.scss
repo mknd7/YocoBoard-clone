@@ -72,7 +72,7 @@
   background-size: $size;
 }
 
-@mixin circle($color: $color--circle) {
+@mixin circle($color: $color-circle) {
   background-color: $color;
   border-radius: 50%;
 }

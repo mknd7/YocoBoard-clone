@@ -18,7 +18,4 @@
 .circle {
   @include circle;
   @include size($circle-size);
-  @include transition(0.4s);
-  @include background-image($size: cover);
-  display: block;
 }
