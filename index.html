@@ -6,9 +6,66 @@
 
     <title>YocoBoard</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="src/scss/main.css" rel="stylesheet">
   </head>
+
   <body>
+
+    <aside class="sidebar">
+      <header class="logo"></header>
+
+      <div class="sidebar-scroll">
+        <div class="profile-container">
+          <span class="profile-link company-current" id="company-selected">
+            Full Creative
+          </span>
+
+          <div class="profilepic-container">
+            <img src="src/img/profilepic.png">
+          </div>
+
+          <span class="profile-link project-current" id="project-selected">
+            AnswerConnect
+          </span>
+        </div>
+
+        <div class="time-container">
+          <div class="time clocked-out" id="timer">
+            <span class="hrs">00</span>
+            <span class="min">: 00 :</span>
+            <span class="sec">00</span>
+          </div>
+
+          <div class="clock-toggle">
+            <span class="switch"></span>
+            <span class="clock-status">Clocked Out</span>
+          </div>
+        </div>
+
+        <ul class="sidebar-nav">
+          <li><a href="#">Hours</a></li>
+          <li><a href="#">Peers</a></li>
+          <li><a href="#">Feeds</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Administrator</a></li>
+          <li><a href="#">Adjustments</a></li>
+          <li><a href="#">Payroll</a></li>
+        </ul>
+      </div>
+
+      <footer class="user">
+        <span class="username"></span>
+      </footer>
+    </aside>
+
+    <section class="main-content">
+      <header class="name-header"></header>
+
+      <article class="reports-page"></article>
+    </section>
+
   </body>
 </html>

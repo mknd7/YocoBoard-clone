@@ -1,0 +1,156 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
+
+a {
+  color: #ffffff;
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.inlineblock-fix::after {
+  content: '';
+  display: inline-block;
+  width: 100%; }
+
+.circle {
+  background-color: #d8d8d8;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px; }
+
+.sidebar {
+  width: 204px;
+  height: 100%;
+  background-color: #242633;
+  color: #ffffff;
+  font-weight: 300;
+  position: relative; }
+  .sidebar .logo {
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px; }
+  .sidebar .sidebar-scroll {
+    overflow-y: auto; }
+  .sidebar .user {
+    position: absolute;
+    bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%; }
+
+.profile-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 253px;
+  background-color: #2e3040;
+  text-align: center; }
+  .profile-container .company-current {
+    margin-bottom: 25px; }
+  .profile-container .profile-link {
+    background-image: url("../img/down-arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+    background-position: center right;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    cursor: pointer; }
+    .profile-container .profile-link.project-current {
+      margin-top: 20px;
+      margin-bottom: 0; }
+  .profile-container .profilepic-container {
+    width: 132px;
+    height: 132px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+    .profile-container .profilepic-container img {
+      width: 100%; }
+
+.time-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center; }
+  .time-container .time {
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #ffffff; }
+    .time-container .time.clocked-out {
+      color: rgba(255, 255, 255, 0.2); }
+  .time-container .clock-toggle {
+    width: 120px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
+    -ms-border-radius: 27px;
+    border-radius: 27px;
+    background-color: #2e3040;
+    box-shadow: 0 0 4px 0 #2e3040;
+    cursor: pointer;
+    position: relative; }
+    .time-container .clock-toggle .switch {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      width: 26px;
+      height: 26px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transition: 0.4s;
+      transition: 0.4s;
+      background-color: #2e3040;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+    .time-container .clock-toggle .clock-status {
+      font-size: 10px;
+      line-height: 30px;
+      color: rgba(255, 255, 255, 0.6); }
+    .time-container .clock-toggle.clocked-in {
+      background-color: #2bca91; }
+      .time-container .clock-toggle.clocked-in .switch {
+        left: initial;
+        right: 2px; }
+      .time-container .clock-toggle.clocked-in .clock-status {
+        color: #ffffff; }
+
+.sidebar-nav {
+  padding-left: 36px; }
+  .sidebar-nav li {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    .sidebar-nav li a {
+      color: rgba(255, 255, 255, 0.4);
+      padding-left: 35px;
+      font-size: 16px; }
+      .sidebar-nav li a:hover {
+        color: #ffffff; }
+
+/*# sourceMappingURL=main.css.map */

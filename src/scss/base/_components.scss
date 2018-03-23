@@ -1,1 +1,112 @@
-{}
+.sidebar {
+  @include size(204px, 100%);
+  background-color: $color-sidebar;
+  color: $color--white;
+  font-weight: $font-weight--light;
+  position: relative;
+
+  .logo {
+    @include background-image('logo.svg');
+    height: 70px;
+  }
+
+  .sidebar-scroll {
+    overflow-y: auto;
+  }
+
+  .user {
+    @include position(absolute, $bottom: 0);
+    @include padding($top: 25px, $bottom: 25px);
+    width: 100%;
+  }
+}
+
+.profile-container {
+  @include padding($top: 20px, $bottom: 20px);
+  height: 253px;
+  background-color: $color-profile;
+  text-align: center;
+  .company-current {
+    margin-bottom: 25px;
+  }
+  .profile-link {
+    @include background-image('down-arrow.png');
+    background-size: 8px;
+    background-position: center right;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    cursor: pointer;
+    &.project-current {
+      @include margin($top: 20px, $bottom: 0);
+    }
+  }
+  .profilepic-container {
+    @include size(132px);
+    @include center-block;
+    @include border-radius(50%);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.time-container {
+  @include padding($top: 20px, $bottom: 20px);
+  text-align: center;
+  .time {
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: $color--white;
+    &.clocked-out {
+      color: rgba($color--white, 0.2);
+    }
+  }
+  .clock-toggle {
+    @include size(120px, 32px);
+    @include center-block;
+    @include border-radius(27px);
+    background-color: $color-profile;
+    box-shadow: 0 0 4px 0 $color-profile;
+    cursor: pointer;
+    position: relative;
+    .switch {
+      @include position(absolute, $top: 3px, $left: 2px);
+      @include size(26px);
+      @include border-radius(50%);
+      @include transition(0.4s);
+      background-color: $color-profile;
+      box-shadow: 0 2px 4px 0 rgba(black, 0.5);
+    }
+    .clock-status {
+      font-size: $font-size--small;
+      line-height: 30px;
+      color: rgba($color--white, 0.6);
+    }
+    &.clocked-in {
+      background-color: $color--mint;
+      .switch {
+        left: initial;
+        right: 2px;
+      }
+      .clock-status {
+        color: $color--white;
+      }
+    }
+  }
+}
+
+.sidebar-nav {
+  padding-left: 36px;
+  li {
+    @include padding($top: 15px, $bottom: 15px);
+    a {
+      color: rgba($color--white, 0.4);
+      padding-left: 35px;
+      font-size: $font-size--heading;
+      &:hover {
+        color: $color--white;
+      }
+    }
+  }
+}

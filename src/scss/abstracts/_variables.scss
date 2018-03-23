@@ -4,6 +4,7 @@ $font-size--heading: 16px;
 $font-size--text: 14px;
 $font-size--small: 10px;
 
+$font-weight--light: 300;
 $font-weight--regular: 400;
 $font-weight--bold: 600;
 
@@ -17,8 +18,5 @@ $color--mint: #2bca91;
 
 $circle-size: 42px;
 $iconwidth: 20px;
-
-$logo-width-default: 45px;
-$logo-height-default: $logo-width-default / 9 * 8;
 
 $image-path: '../img/';
