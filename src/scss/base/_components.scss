@@ -1,6 +1,6 @@
 .sidebar {
-  @include size(204px, 100%);
-  min-height: 100vh;
+  @include position(fixed, $top: 0, $left: 0);
+  @include size(204px, 100vh);
   background-color: $color-sidebar;
   color: $color--white;
   font-weight: $font-weight--light;
@@ -22,10 +22,14 @@
     @include size(100%, 70px);
     background-color: $color-sidebar;
     text-align: center;
+    .username {
+      font-size: $font-size--heading;
+      color: $color--light;
+    }
     .useroptions {
       @include inline-block;
       @include size(20px, 10px);
-      @include background-image('user-options.svg', 20px, $position: center);
+      @include background-image('user-options.svg', 20px, center);
       margin-left: 6px;
       cursor: pointer;
     }
@@ -50,7 +54,7 @@
       @include margin($top: 20px, $bottom: 0);
     }
   }
-  .profilepic-container {
+  .profilepic-wrapper {
     @include size(132px);
     @include center-block;
     @include border-radius(50%);
@@ -114,6 +118,7 @@
       padding-left: 35px;
       font-size: $font-size--heading;
       background-position: left center;
+      background-size: $iconwidth;
       &:hover {
         color: $color--white;
       }
@@ -126,32 +131,61 @@
     }
 
     &:nth-of-type(1) a {
-      @include background-image('nav-hours.svg', $iconwidth);
+      @include background-image('nav-hours.svg');
     }
     &:nth-of-type(2) a {
-      @include background-image('nav-peers.svg', $iconwidth);
+      @include background-image('nav-peers.svg');
     }
     &:nth-of-type(3) a {
-      @include background-image('nav-feeds.svg', $iconwidth);
+      @include background-image('nav-feeds.svg');
     }
     &:nth-of-type(4) a {
-      @include background-image('nav-settings.svg', $iconwidth);
+      @include background-image('nav-settings.svg');
     }
     &:nth-of-type(5) a {
-      @include background-image('nav-feedback.svg', $iconwidth);
+      @include background-image('nav-feedback.svg');
     }
     &:nth-of-type(6) a {
-      @include background-image('nav-reports.svg', $iconwidth);
+      @include background-image('nav-reports.svg');
     }
     &:nth-of-type(7) a {
-      @include background-image('nav-admin.svg', $iconwidth);
+      @include background-image('nav-admin.svg');
     }
     &:nth-of-type(8) a {
-      @include background-image('nav-adjusts.svg', $iconwidth);
+      @include background-image('nav-adjusts.svg');
     }
     &:nth-of-type(9) a {
-      @include background-image('nav-payroll.svg', $iconwidth);
+      @include background-image('nav-payroll.svg');
     }
 
+  }
+}
+
+.main-content {
+  @include position(fixed, $top: 0, $left: 204px);
+  @include size(calc(100% - 204px), 100%);
+  .name-header {
+    @include size(100%, 70px);
+    padding: 21px 50px 25px;
+    border-bottom: 1px solid $color--light;
+    .welcome {
+      float: left;
+      font-size: $font-size--large;
+      font-weight: $font-weight--regular;
+      color: $color--headertext;
+    }
+    .timezone-container {
+      float: right;
+      .clock-image {
+        @include background-image('clock.svg', 14px, center);
+        @include inline-block;
+        @include size(14px);
+        margin-right: 12px;
+      }
+      .timezone {
+        @include inline-block;
+        color: $color--mint;
+      }
+    }
   }
 }

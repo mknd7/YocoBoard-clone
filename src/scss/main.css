@@ -37,9 +37,11 @@ ul {
   height: 42px; }
 
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 204px;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #242633;
   color: #ffffff;
   font-weight: 300;
@@ -61,6 +63,9 @@ ul {
     height: 70px;
     background-color: #242633;
     text-align: center; }
+    .sidebar .user .username {
+      font-size: 16px;
+      color: #d5d6e1; }
     .sidebar .user .useroptions {
       display: inline-block;
       vertical-align: middle;
@@ -93,7 +98,7 @@ ul {
     .profile-container .profile-link.project-current {
       margin-top: 20px;
       margin-bottom: 0; }
-  .profile-container .profilepic-container {
+  .profile-container .profilepic-wrapper {
     width: 132px;
     height: 132px;
     margin-left: auto;
@@ -102,7 +107,7 @@ ul {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%; }
-    .profile-container .profilepic-container img {
+    .profile-container .profilepic-wrapper img {
       width: 100%; }
 
 .time-container {
@@ -165,46 +170,71 @@ ul {
       color: rgba(255, 255, 255, 0.4);
       padding-left: 35px;
       font-size: 16px;
-      background-position: left center; }
+      background-position: left center;
+      background-size: 20px; }
       .sidebar-nav li a:hover {
         color: #ffffff; }
     .sidebar-nav li.active-page a {
       color: #ffffff; }
     .sidebar-nav li:nth-of-type(1) a {
       background-image: url("../img/nav-hours.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(2) a {
       background-image: url("../img/nav-peers.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(3) a {
       background-image: url("../img/nav-feeds.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(4) a {
       background-image: url("../img/nav-settings.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(5) a {
       background-image: url("../img/nav-feedback.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(6) a {
       background-image: url("../img/nav-reports.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(7) a {
       background-image: url("../img/nav-admin.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(8) a {
       background-image: url("../img/nav-adjusts.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
     .sidebar-nav li:nth-of-type(9) a {
       background-image: url("../img/nav-payroll.svg");
-      background-repeat: no-repeat;
-      background-size: 20px; }
+      background-repeat: no-repeat; }
+
+.main-content {
+  position: fixed;
+  top: 0;
+  left: 204px;
+  width: calc(100% - 204px);
+  height: 100%; }
+  .main-content .name-header {
+    width: 100%;
+    height: 70px;
+    padding: 21px 50px 25px;
+    border-bottom: 1px solid #d5d6e1; }
+    .main-content .name-header .welcome {
+      float: left;
+      font-size: 20px;
+      font-weight: 400;
+      color: #262626; }
+    .main-content .name-header .timezone-container {
+      float: right; }
+      .main-content .name-header .timezone-container .clock-image {
+        background-image: url("../img/clock.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 14px;
+        height: 14px;
+        margin-right: 12px; }
+      .main-content .name-header .timezone-container .timezone {
+        display: inline-block;
+        vertical-align: middle;
+        color: #2bca91; }
 
 /*# sourceMappingURL=main.css.map */
