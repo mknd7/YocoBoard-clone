@@ -68,9 +68,8 @@ ul {
   .profile-container .profile-link {
     background-image: url("../img/down-arrow.png");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 8px;
     background-position: center right;
+    background-size: 8px;
     display: inline-block;
     margin-bottom: 20px;
     padding-right: 15px;
@@ -149,8 +148,47 @@ ul {
     .sidebar-nav li a {
       color: rgba(255, 255, 255, 0.4);
       padding-left: 35px;
-      font-size: 16px; }
+      font-size: 16px;
+      background-position: left center; }
       .sidebar-nav li a:hover {
         color: #ffffff; }
+    .sidebar-nav li.active-page a {
+      color: #ffffff; }
+    .sidebar-nav li:nth-of-type(1) a {
+      background-image: url("../img/nav-hours.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(2) a {
+      background-image: url("../img/nav-peers.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(3) a {
+      background-image: url("../img/nav-feeds.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(4) a {
+      background-image: url("../img/nav-settings.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(5) a {
+      background-image: url("../img/nav-feedback.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(6) a {
+      background-image: url("../img/nav-reports.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(7) a {
+      background-image: url("../img/nav-admin.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(8) a {
+      background-image: url("../img/nav-adjusts.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
+    .sidebar-nav li:nth-of-type(9) a {
+      background-image: url("../img/nav-payroll.svg");
+      background-repeat: no-repeat;
+      background-size: 20px; }
 
 /*# sourceMappingURL=main.css.map */

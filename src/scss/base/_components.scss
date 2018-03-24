@@ -6,7 +6,7 @@
   position: relative;
 
   .logo {
-    @include background-image('logo.svg');
+    @include background-image('logo.svg', $position: center);
     height: 70px;
   }
 
@@ -30,9 +30,7 @@
     margin-bottom: 25px;
   }
   .profile-link {
-    @include background-image('down-arrow.png');
-    background-size: 8px;
-    background-position: center right;
+    @include background-image('down-arrow.png', 8px, center right);
     display: inline-block;
     margin-bottom: 20px;
     padding-right: 15px;
@@ -104,9 +102,45 @@
       color: rgba($color--white, 0.4);
       padding-left: 35px;
       font-size: $font-size--heading;
+      background-position: left center;
       &:hover {
         color: $color--white;
       }
     }
+
+    &.active-page {
+      a {
+        color: $color--white;
+      }
+    }
+
+    &:nth-of-type(1) a {
+      @include background-image('nav-hours.svg', $iconwidth);
+    }
+    &:nth-of-type(2) a {
+      @include background-image('nav-peers.svg', $iconwidth);
+    }
+    &:nth-of-type(3) a {
+      @include background-image('nav-feeds.svg', $iconwidth);
+    }
+    &:nth-of-type(4) a {
+      @include background-image('nav-settings.svg', $iconwidth);
+    }
+    &:nth-of-type(5) a {
+      @include background-image('nav-feedback.svg', $iconwidth);
+    }
+    &:nth-of-type(6) a {
+      @include background-image('nav-reports.svg', $iconwidth);
+    }
+    &:nth-of-type(7) a {
+      @include background-image('nav-admin.svg', $iconwidth);
+    }
+    &:nth-of-type(8) a {
+      @include background-image('nav-adjusts.svg', $iconwidth);
+    }
+    &:nth-of-type(9) a {
+      @include background-image('nav-payroll.svg', $iconwidth);
+    }
+
   }
 }
