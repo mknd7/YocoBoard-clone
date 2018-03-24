@@ -161,7 +161,7 @@
   }
 }
 
-.main-content {
+.content-container {
   @include position(fixed, $top: 0, $left: 204px);
   @include size(calc(100% - 204px), 100%);
   .name-header {

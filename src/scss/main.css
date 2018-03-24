@@ -204,25 +204,25 @@ ul {
       background-image: url("../img/nav-payroll.svg");
       background-repeat: no-repeat; }
 
-.main-content {
+.content-container {
   position: fixed;
   top: 0;
   left: 204px;
   width: calc(100% - 204px);
   height: 100%; }
-  .main-content .name-header {
+  .content-container .name-header {
     width: 100%;
     height: 70px;
     padding: 21px 50px 25px;
     border-bottom: 1px solid #d5d6e1; }
-    .main-content .name-header .welcome {
+    .content-container .name-header .welcome {
       float: left;
       font-size: 20px;
       font-weight: 400;
       color: #262626; }
-    .main-content .name-header .timezone-container {
+    .content-container .name-header .timezone-container {
       float: right; }
-      .main-content .name-header .timezone-container .clock-image {
+      .content-container .name-header .timezone-container .clock-image {
         background-image: url("../img/clock.svg");
         background-repeat: no-repeat;
         background-position: center;
@@ -232,7 +232,7 @@ ul {
         width: 14px;
         height: 14px;
         margin-right: 12px; }
-      .main-content .name-header .timezone-container .timezone {
+      .content-container .name-header .timezone-container .timezone {
         display: inline-block;
         vertical-align: middle;
         color: #2bca91; }
