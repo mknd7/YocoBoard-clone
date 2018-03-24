@@ -1,5 +1,6 @@
 .sidebar {
   @include size(204px, 100%);
+  min-height: 100vh;
   background-color: $color-sidebar;
   color: $color--white;
   font-weight: $font-weight--light;
@@ -12,12 +13,22 @@
 
   .sidebar-scroll {
     overflow-y: auto;
+    height: calc(100vh - 140px);
   }
 
   .user {
     @include position(absolute, $bottom: 0);
     @include padding($top: 25px, $bottom: 25px);
-    width: 100%;
+    @include size(100%, 70px);
+    background-color: $color-sidebar;
+    text-align: center;
+    .useroptions {
+      @include inline-block;
+      @include size(20px, 10px);
+      @include background-image('user-options.svg', 20px, $position: center);
+      margin-left: 6px;
+      cursor: pointer;
+    }
   }
 }
 
