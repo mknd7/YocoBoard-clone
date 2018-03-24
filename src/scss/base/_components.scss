@@ -4,7 +4,6 @@
   background-color: $color-sidebar;
   color: $color--white;
   font-weight: $font-weight--light;
-  position: relative;
 
   .logo {
     @include background-image('logo.svg', $position: center);
@@ -114,11 +113,10 @@
   li {
     @include padding($top: 15px, $bottom: 15px);
     a {
+      @include background-image('nav-icons.svg');
       color: rgba($color--white, 0.4);
       padding-left: 35px;
       font-size: $font-size--heading;
-      background-position: left center;
-      background-size: $iconwidth;
       &:hover {
         color: $color--white;
       }
@@ -131,31 +129,31 @@
     }
 
     &:nth-of-type(1) a {
-      @include background-image('nav-hours.svg');
+      background-position: 0 -104px;
     }
     &:nth-of-type(2) a {
-      @include background-image('nav-peers.svg');
+      background-position: 0 -150px;
     }
     &:nth-of-type(3) a {
-      @include background-image('nav-feeds.svg');
+      background-position: 0 -73px;
     }
     &:nth-of-type(4) a {
-      @include background-image('nav-settings.svg');
+      background-position: 0 -200px;
     }
     &:nth-of-type(5) a {
-      @include background-image('nav-feedback.svg');
+      background-position: 0 -49px;
     }
     &:nth-of-type(6) a {
-      @include background-image('nav-reports.svg');
+      background-position: 0 -173px;
     }
     &:nth-of-type(7) a {
-      @include background-image('nav-admin.svg');
+      background-position: 0 -24px;
     }
     &:nth-of-type(8) a {
-      @include background-image('nav-adjusts.svg');
+      background-position: 0 0px;
     }
     &:nth-of-type(9) a {
-      @include background-image('nav-payroll.svg');
+      background-position: 0 -128px;
     }
 
   }
