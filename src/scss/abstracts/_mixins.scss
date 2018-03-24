@@ -63,12 +63,12 @@
   vertical-align: $alignment;
 }
 
-@mixin background-image($image: null, $size: null) {
+@mixin background-image($image: null, $size: null, $position: null) {
   @if ($image) {
     background-image: url($image-path + $image);
   }
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: $position;
   background-size: $size;
 }
 
