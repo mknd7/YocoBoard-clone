@@ -1,2 +1,2 @@
-#ignore sass-cache
 src/scss/.sass-cache/*
+src/scss/main.css.map
