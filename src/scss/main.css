@@ -20,6 +20,20 @@ a {
 ul {
   list-style-type: none; }
 
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse; }
+
+input[type="search"] {
+  border: 0;
+  font-family: inherit;
+  font-size: inherit; }
+  input[type="search"]:focus {
+    outline: 0; }
+  input[type="search"]::placeholder {
+    color: #d5d6e1; }
+
 .clearfix::after {
   content: '';
   display: block;
@@ -102,9 +116,7 @@ ul {
     height: 132px;
     margin-left: auto;
     margin-right: auto;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
+    background-color: #d8d8d8;
     border-radius: 50%; }
     .profile-container .profilepic-wrapper img {
       width: 100%; }
@@ -228,7 +240,8 @@ ul {
         color: #2bca91; }
 
 .reports-page .reports-header {
-  padding: 10px 20px 15px 50px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   font-size: 0; }
 
 .reports-header {
@@ -236,7 +249,8 @@ ul {
   .reports-header .heading-div {
     display: inline-block;
     vertical-align: middle;
-    width: 28%; }
+    width: 28%;
+    padding-left: 50px; }
     .reports-header .heading-div h3 {
       font-size: 20px;
       font-weight: 400; }
@@ -244,6 +258,7 @@ ul {
     display: inline-block;
     vertical-align: middle;
     width: 72%;
+    padding-right: 20px;
     font-size: 16px; }
     .reports-header .options-div .options-current {
       background-image: url("../img/down-arrow-dark.png");
@@ -275,5 +290,87 @@ ul {
         background-repeat: no-repeat;
         background-position: bottom;
         margin-right: 0; }
+
+.reports-table colgroup .person-col {
+  background-color: rgba(213, 214, 225, 0.1);
+  border-right: 1px solid #d5d6e1; }
+.reports-table thead tr {
+  background-color: #fbfbfc;
+  border-bottom: 1px solid #d5d6e1;
+  text-align: center;
+  width: 100%; }
+  .reports-table thead tr .search {
+    padding: 17px;
+    padding-left: 30px;
+    width: 28%;
+    font-size: 0;
+    border-right: 1px solid #d5d6e1;
+    text-align: left; }
+    .reports-table thead tr .search input {
+      width: calc(100% - 24px);
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 10px;
+      padding-left: 27px;
+      background-image: url("../img/search.png");
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: 12px;
+      background-color: transparent;
+      font-size: 12px;
+      border-right: 1px solid #d5d6e1;
+      margin-right: 12px; }
+  .reports-table thead tr .filter {
+    width: 12px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../img/filter.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 13px;
+    cursor: pointer; }
+  .reports-table thead tr th span {
+    display: block;
+    color: #333333; }
+    .reports-table thead tr th span.date-span {
+      font-size: 10px;
+      margin-top: 2px; }
+.reports-table .checkbox {
+  width: 5.3%; }
+  .reports-table .checkbox input {
+    width: 15px;
+    height: 15px; }
+.reports-table tbody tr {
+  text-align: center; }
+  .reports-table tbody tr .person {
+    width: 28%;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 1px solid #d5d6e1; }
+    .reports-table tbody tr .person .profile-photo {
+      width: 42px;
+      height: 42px;
+      background-color: #d8d8d8;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px; }
+    .reports-table tbody tr .person .person-details {
+      display: inline-block;
+      vertical-align: middle; }
+      .reports-table tbody tr .person .person-details .email {
+        display: block;
+        color: #4d6579;
+        margin-top: 7px; }
+.reports-table tbody::after {
+  content: '';
+  display: table-row;
+  width: 100%;
+  height: calc(100vh - 255px); }
+
+.test {
+  overflow: auto; }
 
 /*# sourceMappingURL=main.css.map */

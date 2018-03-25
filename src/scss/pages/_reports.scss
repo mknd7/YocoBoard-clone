@@ -1,30 +1,36 @@
 .reports-page {
   .reports-header {
-    padding: 10px 20px 15px 50px;
+    @include padding($top: 10px, $bottom: 15px);
     font-size: 0;
   }
 }
 
 .reports-header {
   border-bottom: 1px solid $color--light;
+
   .heading-div {
     @include inline-block;
     width: 28%;
+    padding-left: 50px;
     h3 {
       font-size: $font-size--large;
       font-weight: $font-weight--regular;
     }
   }
+
   .options-div {
     @include inline-block;
     width: 72%;
+    padding-right: 20px;
     font-size: $font-size--heading;
+
     .options-current {
       @include background-image('down-arrow-dark.png', 12px, center right);
       float: left;
       padding-right: 25px;
       cursor: pointer;
     }
+
     .options-other {
       float: right;
       font-size: 0;
@@ -43,6 +49,100 @@
         @include background-image('dl-cloud.svg', $position: bottom);
         margin-right: 0;
       }
+    }
+  }
+}
+
+.reports-table {
+  colgroup .person-col {
+    background-color: rgba($color--light, 0.1);
+    border-right: 1px solid $color--light;
+  }
+
+  thead tr {
+    background-color: $color-tableheader;
+    border-bottom: 1px solid $color--light;
+    text-align: center;
+    width: 100%;
+
+    .search {
+      padding: 17px;
+      padding-left: 30px;
+      width: 28%;
+      font-size: 0;
+      border-right: 1px solid $color--light;
+      text-align: left;
+
+      input {
+        @include size(calc(100% - 24px), 20px);
+        @include inline-block;
+        @include padding($left: 27px, $right: 10px);
+        @include background-image('search.png', 12px, center left);
+        background-color: transparent;
+        font-size: $font-size--search;
+        border-right: 1px solid $color--light;
+        margin-right: 12px;
+      }
+    }
+
+    .filter {
+      @include size(12px, 20px);
+      @include inline-block;
+      @include background-image('filter.png', 13px, center right);
+      cursor: pointer;
+    }
+
+    th span {
+      display: block;
+      color: $color--datetext;
+      &.date-span {
+        font-size: $font-size--small;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .checkbox {
+    width: 5.3%;
+    input {
+      @include size(15px);
+    }
+  }
+
+  tbody tr {
+    text-align: center;
+
+    .person {
+      width: 28%;
+      padding: 15px 10px;
+      text-align: left;
+      border-bottom: 1px solid $color--light;
+
+      .profile-photo {
+        @include size($circle-size);
+        @include circle($color-circle);
+        @include inline-block;
+        margin-right: 20px;
+      }
+
+      .person-details {
+        @include inline-block;
+        .email {
+          display: block;
+          color: $color--email;
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+
+  tbody {
+    // fill up remaining space
+    &::after {
+      content: '';
+      display: table-row;
+      width: 100%;
+      height: calc(100vh - 255px);
     }
   }
 }

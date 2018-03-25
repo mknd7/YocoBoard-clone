@@ -56,7 +56,7 @@
   .profilepic-wrapper {
     @include size(132px);
     @include center-block;
-    @include border-radius(50%);
+    @include circle($color-circle);
     img {
       width: 100%;
     }
