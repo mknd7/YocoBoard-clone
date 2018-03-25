@@ -227,4 +227,53 @@ ul {
         vertical-align: middle;
         color: #2bca91; }
 
+.reports-page .reports-header {
+  padding: 10px 20px 15px 50px;
+  font-size: 0; }
+
+.reports-header {
+  border-bottom: 1px solid #d5d6e1; }
+  .reports-header .heading-div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 28%; }
+    .reports-header .heading-div h3 {
+      font-size: 20px;
+      font-weight: 400; }
+  .reports-header .options-div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 72%;
+    font-size: 16px; }
+    .reports-header .options-div .options-current {
+      background-image: url("../img/down-arrow-dark.png");
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: 12px;
+      float: left;
+      padding-right: 25px;
+      cursor: pointer; }
+    .reports-header .options-div .options-other {
+      float: right;
+      font-size: 0; }
+      .reports-header .options-div .options-other a {
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        margin-right: 30px; }
+      .reports-header .options-div .options-other .listview {
+        background-image: url("../img/listview.svg");
+        background-repeat: no-repeat;
+        background-position: bottom; }
+      .reports-header .options-div .options-other .gridview {
+        background-image: url("../img/gridview.svg");
+        background-repeat: no-repeat;
+        background-position: bottom; }
+      .reports-header .options-div .options-other .dl-data {
+        background-image: url("../img/dl-cloud.svg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        margin-right: 0; }
+
 /*# sourceMappingURL=main.css.map */

@@ -1,1 +1,48 @@
-// empty
+.reports-page {
+  .reports-header {
+    padding: 10px 20px 15px 50px;
+    font-size: 0;
+  }
+}
+
+.reports-header {
+  border-bottom: 1px solid $color--light;
+  .heading-div {
+    @include inline-block;
+    width: 28%;
+    h3 {
+      font-size: $font-size--large;
+      font-weight: $font-weight--regular;
+    }
+  }
+  .options-div {
+    @include inline-block;
+    width: 72%;
+    font-size: $font-size--heading;
+    .options-current {
+      @include background-image('down-arrow-dark.png', 12px, center right);
+      float: left;
+      padding-right: 25px;
+      cursor: pointer;
+    }
+    .options-other {
+      float: right;
+      font-size: 0;
+      a {
+        @include inline-block;
+        @include size(24px);
+        margin-right: 30px;
+      }
+      .listview {
+        @include background-image('listview.svg', $position: bottom);
+      }
+      .gridview {
+        @include background-image('gridview.svg', $position: bottom);
+      }
+      .dl-data {
+        @include background-image('dl-cloud.svg', $position: bottom);
+        margin-right: 0;
+      }
+    }
+  }
+}
