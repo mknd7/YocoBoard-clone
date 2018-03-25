@@ -26,7 +26,17 @@ table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
-  th, td {
-    padding: 10px;
+}
+
+input {
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: inherit;
+  &:focus {
+    outline: 0;
+  }
+  &::placeholder {
+    color: $color--light;
   }
 }
