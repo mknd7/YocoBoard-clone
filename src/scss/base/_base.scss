@@ -28,11 +28,10 @@ table {
   border-collapse: collapse;
 }
 
-input {
+input[type="search"] {
   border: 0;
   font-family: inherit;
   font-size: inherit;
-  background-color: inherit;
   &:focus {
     outline: 0;
   }
