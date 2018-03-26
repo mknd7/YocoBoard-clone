@@ -114,17 +114,18 @@
     @include padding($top: 15px, $bottom: 15px);
     a {
       @include background-image('nav-icons.svg');
-      color: rgba($color--white, 0.4);
+      color: $color--white;
+      opacity: 0.4;
       padding-left: 35px;
       font-size: $font-size--heading;
       &:hover {
-        color: $color--white;
+        opacity: 1;
       }
     }
 
     &.active-page {
       a {
-        color: $color--white;
+        opacity: 1;
       }
     }
 

@@ -180,13 +180,14 @@ input[type="search"] {
     .sidebar-nav li a {
       background-image: url("../img/nav-icons.svg");
       background-repeat: no-repeat;
-      color: rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      opacity: 0.4;
       padding-left: 35px;
       font-size: 16px; }
       .sidebar-nav li a:hover {
-        color: #ffffff; }
+        opacity: 1; }
     .sidebar-nav li.active-page a {
-      color: #ffffff; }
+      opacity: 1; }
     .sidebar-nav li:nth-of-type(1) a {
       background-position: 0 -104px; }
     .sidebar-nav li:nth-of-type(2) a {
@@ -369,8 +370,5 @@ input[type="search"] {
   display: table-row;
   width: 100%;
   height: calc(100vh - 255px); }
-
-.test {
-  overflow: auto; }
 
 /*# sourceMappingURL=main.css.map */
