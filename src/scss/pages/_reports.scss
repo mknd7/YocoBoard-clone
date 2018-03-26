@@ -53,7 +53,14 @@
   }
 }
 
+.table-wrapper {
+  @include size(100%, calc(100vh - 123px));
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .reports-table {
+
   colgroup .person-col {
     background-color: rgba($color--light, 0.1);
     border-right: 1px solid $color--light;
@@ -95,6 +102,9 @@
     th span {
       display: block;
       color: $color--datetext;
+      &:first-of-type {
+        font-weight: $font-weight--bold;
+      }
       &.date-span {
         font-size: $font-size--small;
         margin-top: 2px;
@@ -127,6 +137,9 @@
 
       .person-details {
         @include inline-block;
+        span:first-of-type {
+          font-weight: $font-weight--bold;
+        }
         .email {
           display: block;
           color: $color--email;
@@ -139,10 +152,9 @@
   tbody {
     // fill up remaining space
     &::after {
+      @include size(100%);
       content: '';
       display: table-row;
-      width: 100%;
-      height: calc(100vh - 255px);
     }
   }
 }
