@@ -53,24 +53,28 @@
   }
 }
 
-.table-wrapper {
-  @include size(100%, calc(100vh - 123px));
-  overflow-x: hidden;
-  overflow-y: scroll;
+.checkbox {
+  width: 5.3%;
+  input {
+    @include size(15px);
+  }
 }
 
-.reports-table {
+.header-wrapper {
+  background-color: $color-tableheader;
+  border-bottom: 1px solid $color--light;
+  text-align: center;
+  width: 100%;
+}
 
-  colgroup .person-col {
-    background-color: rgba($color--light, 0.1);
-    border-right: 1px solid $color--light;
-  }
+.body-wrapper {
+  @include size(100%, calc(100vh - 179px));
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
+.table-header {
   thead tr {
-    background-color: $color-tableheader;
-    border-bottom: 1px solid $color--light;
-    text-align: center;
-    width: 100%;
 
     .search {
       padding: 17px;
@@ -111,12 +115,13 @@
       }
     }
   }
+}
 
-  .checkbox {
-    width: 5.3%;
-    input {
-      @include size(15px);
-    }
+.table-body {
+
+  colgroup .person-col {
+    background-color: rgba($color--light, 0.1);
+    border-right: 1px solid $color--light;
   }
 
   tbody tr {

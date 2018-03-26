@@ -299,73 +299,76 @@ input[type="search"] {
         background-position: bottom;
         margin-right: 0; }
 
-.table-wrapper {
-  width: 100%;
-  height: calc(100vh - 123px);
-  overflow-x: hidden;
-  overflow-y: scroll; }
+.checkbox {
+  width: 5.3%; }
+  .checkbox input {
+    width: 15px;
+    height: 15px; }
 
-.reports-table colgroup .person-col {
-  background-color: rgba(213, 214, 225, 0.1);
-  border-right: 1px solid #d5d6e1; }
-.reports-table thead tr {
+.header-wrapper {
   background-color: #fbfbfc;
   border-bottom: 1px solid #d5d6e1;
   text-align: center;
   width: 100%; }
-  .reports-table thead tr .search {
-    padding: 17px;
-    padding-left: 30px;
-    width: 28%;
-    font-size: 0;
-    border-right: 1px solid #d5d6e1;
-    text-align: left; }
-    .reports-table thead tr .search input {
-      width: calc(100% - 24px);
-      height: 20px;
-      display: inline-block;
-      vertical-align: middle;
-      padding-right: 10px;
-      padding-left: 27px;
-      background-image: url("../img/search.png");
-      background-repeat: no-repeat;
-      background-position: center left;
-      background-size: 12px;
-      background-color: transparent;
-      font-size: 12px;
-      border-right: 1px solid #d5d6e1;
-      margin-right: 12px; }
-  .reports-table thead tr .filter {
-    width: 12px;
+
+.body-wrapper {
+  width: 100%;
+  height: calc(100vh - 179px);
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.table-header thead tr .search {
+  padding: 17px;
+  padding-left: 30px;
+  width: 28%;
+  font-size: 0;
+  border-right: 1px solid #d5d6e1;
+  text-align: left; }
+  .table-header thead tr .search input {
+    width: calc(100% - 24px);
     height: 20px;
     display: inline-block;
     vertical-align: middle;
-    background-image: url("../img/filter.png");
+    padding-right: 10px;
+    padding-left: 27px;
+    background-image: url("../img/search.png");
     background-repeat: no-repeat;
-    background-position: center right;
-    background-size: 13px;
-    cursor: pointer; }
-  .reports-table thead tr th span {
-    display: block;
-    color: #333333; }
-    .reports-table thead tr th span:first-of-type {
-      font-weight: 600; }
-    .reports-table thead tr th span.date-span {
-      font-size: 10px;
-      margin-top: 2px; }
-.reports-table .checkbox {
-  width: 5.3%; }
-  .reports-table .checkbox input {
-    width: 15px;
-    height: 15px; }
-.reports-table tbody tr {
+    background-position: center left;
+    background-size: 12px;
+    background-color: transparent;
+    font-size: 12px;
+    border-right: 1px solid #d5d6e1;
+    margin-right: 12px; }
+.table-header thead tr .filter {
+  width: 12px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/filter.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 13px;
+  cursor: pointer; }
+.table-header thead tr th span {
+  display: block;
+  color: #333333; }
+  .table-header thead tr th span:first-of-type {
+    font-weight: 600; }
+  .table-header thead tr th span.date-span {
+    font-size: 10px;
+    margin-top: 2px; }
+
+.table-body colgroup .person-col {
+  background-color: rgba(213, 214, 225, 0.1);
+  border-right: 1px solid #d5d6e1; }
+.table-body tbody tr {
   text-align: center; }
-  .reports-table tbody tr .person {
+  .table-body tbody tr .person {
     width: 28%;
     padding: 15px 10px;
     text-align: left;
     border-bottom: 1px solid #d5d6e1; }
-    .reports-table tbody tr .person .profile-photo {
+    .table-body tbody tr .person .profile-photo {
       width: 42px;
       height: 42px;
       background-color: #d8d8d8;
@@ -373,12 +376,12 @@ input[type="search"] {
       display: inline-block;
       vertical-align: middle;
       margin-right: 20px; }
-    .reports-table tbody tr .person .person-details {
+    .table-body tbody tr .person .person-details {
       display: inline-block;
       vertical-align: middle; }
-      .reports-table tbody tr .person .person-details span:first-of-type {
+      .table-body tbody tr .person .person-details span:first-of-type {
         font-weight: 600; }
-      .reports-table tbody tr .person .person-details .email {
+      .table-body tbody tr .person .person-details .email {
         display: block;
         color: #4d6579;
         margin-top: 7px; }

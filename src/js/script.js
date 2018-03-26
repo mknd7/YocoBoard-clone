@@ -1,18 +1,34 @@
 const $filler = $('#filler');
 const $clockSwitch = $('#clock-toggle');
+const $tableHeader = $('#table_head');
+const $tableBody = $('#table_body');
 
-function getHeight() {
+// sets height of filler td element (for background)
+function setHeight() {
     var height = window.innerHeight;
     var offset = $filler.offset().top;
-    return (offset < height) ? height - offset : 0;
+    var result = (offset < height) ? height - offset : 0;
+    $filler.height(result);
+}
+
+// sets width of table header depending on scrollbar
+function setWidth() {
+    if ($tableBody[0].scrollHeight > $tableBody.height()) {
+        $tableHeader.width('98.78%');
+    }
+    else {
+        $tableHeader.width('100%');
+    }
 }
 
 $(function () {
 
-    $filler.height(getHeight());
+    setWidth();
+    setHeight();
 
     $(window).resize(function() {
-        $filler.height(getHeight());
+        setWidth();
+        setHeight();
     });
 
     $clockSwitch.click(function() {
