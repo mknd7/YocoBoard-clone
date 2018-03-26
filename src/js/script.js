@@ -1,4 +1,5 @@
 const $filler = $('#filler');
+const $clockSwitch = $('#clock-toggle');
 
 function getHeight() {
     var height = window.innerHeight;
@@ -12,5 +13,9 @@ $(function () {
 
     $(window).resize(function() {
         $filler.height(getHeight());
+    });
+
+    $clockSwitch.click(function() {
+        $(this).toggleClass('clocked-in');
     });
 });

@@ -131,7 +131,7 @@ input[type="search"] {
     color: #ffffff; }
     .time-container .time.clocked-out {
       color: rgba(255, 255, 255, 0.2); }
-  .time-container .clock-toggle {
+  .time-container .clock-switch {
     width: 120px;
     height: 32px;
     margin-left: auto;
@@ -140,11 +140,15 @@ input[type="search"] {
     -moz-border-radius: 27px;
     -ms-border-radius: 27px;
     border-radius: 27px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    transition: 0.4s;
     background-color: #2e3040;
     box-shadow: 0 0 4px 0 #2e3040;
     cursor: pointer;
     position: relative; }
-    .time-container .clock-toggle .switch {
+    .time-container .clock-switch .switch {
       position: absolute;
       top: 3px;
       left: 2px;
@@ -160,16 +164,19 @@ input[type="search"] {
       transition: 0.4s;
       background-color: #2e3040;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
-    .time-container .clock-toggle .clock-status {
+    .time-container .clock-switch::after {
+      content: 'Clocked Out';
       font-size: 10px;
       line-height: 30px;
       color: rgba(255, 255, 255, 0.6); }
-    .time-container .clock-toggle.clocked-in {
+    .time-container .clock-switch.clocked-in {
       background-color: #2bca91; }
-      .time-container .clock-toggle.clocked-in .switch {
-        left: initial;
-        right: 2px; }
-      .time-container .clock-toggle.clocked-in .clock-status {
+      .time-container .clock-switch.clocked-in .switch {
+        left: 92px; }
+      .time-container .clock-switch.clocked-in .clock-status {
+        color: #ffffff; }
+      .time-container .clock-switch.clocked-in::after {
+        content: 'Clocked In';
         color: #ffffff; }
 
 .sidebar-nav {

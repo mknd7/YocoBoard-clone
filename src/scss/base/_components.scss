@@ -74,10 +74,11 @@
       color: rgba($color--white, 0.2);
     }
   }
-  .clock-toggle {
+  .clock-switch {
     @include size(120px, 32px);
     @include center-block;
     @include border-radius(27px);
+    @include transition(0.4s);
     background-color: $color-profile;
     box-shadow: 0 0 4px 0 $color-profile;
     cursor: pointer;
@@ -90,7 +91,8 @@
       background-color: $color-profile;
       box-shadow: 0 2px 4px 0 rgba(black, 0.5);
     }
-    .clock-status {
+    &::after {
+      content: 'Clocked Out';
       font-size: $font-size--small;
       line-height: 30px;
       color: rgba($color--white, 0.6);
@@ -98,10 +100,13 @@
     &.clocked-in {
       background-color: $color--mint;
       .switch {
-        left: initial;
-        right: 2px;
+        left: 92px;
       }
       .clock-status {
+        color: $color--white;
+      }
+      &::after {
+        content: 'Clocked In';
         color: $color--white;
       }
     }
