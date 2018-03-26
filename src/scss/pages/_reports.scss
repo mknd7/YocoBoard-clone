@@ -148,13 +148,4 @@
       }
     }
   }
-
-  tbody {
-    // fill up remaining space
-    &::after {
-      @include size(100%);
-      content: '';
-      display: table-row;
-    }
-  }
 }

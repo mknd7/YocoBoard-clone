@@ -375,10 +375,5 @@ input[type="search"] {
         display: block;
         color: #4d6579;
         margin-top: 7px; }
-.reports-table tbody::after {
-  width: 100%;
-  height: 100%;
-  content: '';
-  display: table-row; }
 
 /*# sourceMappingURL=main.css.map */
