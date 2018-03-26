@@ -267,15 +267,42 @@ input[type="search"] {
     vertical-align: middle;
     width: 72%;
     padding-right: 20px;
-    font-size: 16px; }
+    font-size: 16px;
+    position: relative; }
     .reports-header .options-div .options-current {
-      background-image: url("../img/down-arrow-dark.png");
-      background-repeat: no-repeat;
-      background-position: center right;
-      background-size: 12px;
-      float: left;
-      padding-right: 25px;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background-color: #ffffff;
+      list-style-type: none;
+      padding: 10px;
       cursor: pointer; }
+      .reports-header .options-div .options-current.open-list {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        border: 1px solid #d5d6e1; }
+      .reports-header .options-div .options-current li {
+        display: none;
+        cursor: pointer;
+        margin-bottom: 5px;
+        color: #d5d6e1; }
+        .reports-header .options-div .options-current li.current {
+          background-image: url("../img/down-arrow-dark.png");
+          background-repeat: no-repeat;
+          background-position: center right;
+          background-size: 12px;
+          display: block;
+          padding-right: 25px;
+          color: #262626;
+          margin: 0; }
+    .reports-header .options-div .open-list li {
+      display: block; }
+      .reports-header .options-div .open-list li.current {
+        margin-bottom: 15px; }
+      .reports-header .options-div .open-list li.active-link {
+        display: none; }
     .reports-header .options-div .options-other {
       float: right;
       font-size: 0; }

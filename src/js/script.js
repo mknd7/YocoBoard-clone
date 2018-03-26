@@ -2,6 +2,8 @@ const $filler = $('#filler');
 const $clockSwitch = $('#clock-toggle');
 const $tableHeader = $('#table_head');
 const $tableBody = $('#table_body');
+const $optionsList = $('#options');
+const $options = $("#options li:not('.current')");
 
 const $selectAll = $('#total-select-all');
 var selectAllState = false;
@@ -44,4 +46,19 @@ $(function () {
     });
 
     $selectAll.click(selectAll);
+
+    $optionsList.click(function (event) {
+        event.stopPropagation();
+        $(this).toggleClass('open-list');
+    });
+
+    $(document).click(function () {
+        $optionsList.removeClass('open-list');
+    });
+
+    $options.click(function () {
+        $('.active-link').removeClass('active-link');
+        $(this).addClass('active-link');
+        $('.current').text($(this).text());
+    });
 });
