@@ -3,6 +3,9 @@ const $clockSwitch = $('#clock-toggle');
 const $tableHeader = $('#table_head');
 const $tableBody = $('#table_body');
 
+const $selectAll = $('#total-select-all');
+var selectAllState = false;
+
 // sets height of filler td element (for background)
 function setHeight() {
     var height = window.innerHeight;
@@ -21,6 +24,11 @@ function setWidth() {
     }
 }
 
+function selectAll() {
+    selectAllState = !selectAllState;
+    $('.checkbox input').prop('checked', selectAllState);
+}
+
 $(function () {
 
     setWidth();
@@ -34,4 +42,6 @@ $(function () {
     $clockSwitch.click(function() {
         $(this).toggleClass('clocked-in');
     });
+
+    $selectAll.click(selectAll);
 });
