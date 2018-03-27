@@ -2,6 +2,7 @@ const $filler = $('#filler');
 const $clockSwitch = $('#clock-toggle');
 const $tableHeader = $('#table_head');
 const $tableBody = $('#table_body');
+
 const $optionsList = $('#options');
 const $options = $("#options li:not('.current')");
 

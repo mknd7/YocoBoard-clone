@@ -276,13 +276,14 @@ input[type="search"] {
       background-color: #ffffff;
       list-style-type: none;
       padding: 10px;
+      border: 1px solid transparent;
       cursor: pointer; }
       .reports-header .options-div .options-current.open-list {
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         -ms-border-radius: 4px;
         border-radius: 4px;
-        border: 1px solid #d5d6e1; }
+        border-color: #d5d6e1; }
       .reports-header .options-div .options-current li {
         display: none;
         cursor: pointer;
