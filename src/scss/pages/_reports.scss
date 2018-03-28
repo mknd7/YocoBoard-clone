@@ -27,6 +27,7 @@
 
     .options-current {
       @include position(absolute, $left: -10px, $top: -10px);
+      width: 160px;
       background-color: $color--white;
       list-style-type: none;
       padding: 10px;
