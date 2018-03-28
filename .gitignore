@@ -1,5 +1,5 @@
-src/scss/.sass-cache/*
+src/scss/.sass-cache
 src/scss/main.css.map
-src/img/nav-icons/*
-.DS_Store/*
-.project/*
+src/img/nav-icons
+.DS_Store
+.project
