@@ -3,6 +3,9 @@ const $clockSwitch = $('#clock-toggle');
 const $tableHeader = $('#table_head');
 const $tableBody = $('#table_body');
 
+const $settingsIcon = $('#user-options');
+const $settings = $('#settings');
+
 const $optionsList = $('#options');
 const $options = $("#options li:not('.current')");
 
@@ -55,11 +58,17 @@ $(function () {
 
     $(document).click(function () {
         $optionsList.removeClass('open-list');
+        $settings.removeClass('open-settings');
     });
 
     $options.click(function () {
         $('.active-link').removeClass('active-link');
         $(this).addClass('active-link');
         $('.current').text($(this).text());
+    });
+    
+    $settingsIcon.click(function(event) {
+        event.stopPropagation();
+        $settings.toggleClass('open-settings');
     });
 });
